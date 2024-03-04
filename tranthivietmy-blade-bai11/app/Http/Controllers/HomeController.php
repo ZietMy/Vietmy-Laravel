@@ -14,6 +14,6 @@ class HomeController extends Controller
         $this->data['dataArr'] = [];
         $this->data['check'] = true;
         $this->data['number'] =10;
-        return view('home',$this->data);
+        return view('client.home',$this->data);
     }
 }
