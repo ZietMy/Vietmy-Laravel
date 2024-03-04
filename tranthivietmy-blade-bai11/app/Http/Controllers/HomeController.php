@@ -6,14 +6,24 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public $data=[];
+    //
+    public $data =[];
     public function index(){
-        $this->data['welcome'] = 'Học lập trình Laravel <b>';
-        $this->data['content'] = '<h3>Chương trình học </h3>';
-        $this->data['index']=1;
-        $this->data['dataArr'] = [];
-        $this->data['check'] = true;
-        $this->data['number'] =10;
+        $this->data['title']= 'Lập trình tại unicode';
         return view('client.home',$this->data);
+    }
+    public function product(){
+        $this->data['title'] = 'Sản phẩm';
+        return view('client.products',$this->data);
+    }
+    public function getAdd(){
+        $this->data['title'] = 'Thêm sản phẩm';
+        return view('client.add',$this->data);
+    }
+    public function postAdd(Request $request){
+        dd($request);
+    }
+    public function putAdd(Request $request){
+        dd($request);
     }
 }

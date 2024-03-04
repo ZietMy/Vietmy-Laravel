@@ -14,7 +14,7 @@
     @include('client.blocks.header')
     <main class="py-5">
         <div class="container">
-            <div class="row">
+            <div class="row">a
                 <div class="col-4">
                     <aside>
                         @section('sidabar')
@@ -33,5 +33,6 @@
     @include('client.blocks.footer')
     <script src="{{ asset('asserts/clients/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('asserts/clients/js/custome.js') }}"></script>
+    @stack('scripts');
 </body>
 </html>
